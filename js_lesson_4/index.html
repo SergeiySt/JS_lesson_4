@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Класи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Zeta User Class</h1>
+
+    <div class="user-container" id="user1-container">
+        <p>Admin User:</p>
+        <p>Username: adminUser</p>
+        <p>Password: <span id="user1-password"></span></p>
+        <p>Role: admin</p>
+        <p>Password Validation: <span id="user1-validation"></span></p>
+        <button onclick="changePassword('user1')">Change Password</button>
+        <button onclick="checkPassword('user1')">Check Password</button>
+    </div>
+
+    <div class="user-container" id="user2-container">
+        <p>Editor User:</p>
+        <p>Username: editorUser</p>
+        <p>Password: <span id="user2-password"></span></p>
+        <p>Role: editor</p>
+        <p>Password Validation: <span id="user2-validation"></span></p>
+        <button onclick="changePassword('user2')">Change Password</button>
+        <button onclick="checkPassword('user2')">Check Password</button>
+    </div>
+
+    <script src="class.js"></script>
+</body>
+
+</html>
