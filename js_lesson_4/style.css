@@ -1,22 +1,59 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f0f0f0;
-}
-
-.user-container {
-    background-color: #00a5e0;
-    border-radius: 10px;
+.user-info {
+    margin: 20px;
     padding: 20px;
-    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    display: inline-block;
     width: 300px;
+    box-shadow: 0px 0px 5px #888888;
 }
 
-h1 {
+.user-info h2 {
+    text-align: center;
+    color: #0077b6;
+}
+
+.user-info-box {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.user-info-box h3 {
+    color: #0077b6;
+}
+
+.user-info-box p {
+    margin: 5px 0;
+}
+
+.user-info-box strong {
+    font-weight: bold;
+}
+
+.user-info-box span {
+    font-weight: normal;
     color: #333;
 }
 
-p {
-    color: white;
-    font-weight: bold;
+#user1-username,
+#user2-username {
+    color: #0077b6;
+}
+
+#user1-role,
+#user2-role {
+    color: #0077b6;
+}
+
+#user1-change-password,
+#user2-change-password,
+#user1-check-password,
+#user2-check-password {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
 }

@@ -9,26 +9,36 @@
 </head>
 
 <body>
-    <h1>Zeta User Class</h1>
-
-    <div class="user-container" id="user1-container">
-        <p>Admin User:</p>
-        <p>Username: adminUser</p>
-        <p>Password: <span id="user1-password"></span></p>
-        <p>Role: admin</p>
-        <p>Password Validation: <span id="user1-validation"></span></p>
-        <button onclick="changePassword('user1')">Change Password</button>
-        <button onclick="checkPassword('user1')">Check Password</button>
+    <div class="user-info" id="user12">
+        <h2>User 1</h2>
+        <div class="user-info-box">
+            <p><strong>Ім'я користувача:</strong> <span id="user1-username"></span></p>
+            <p><strong>Роль:</strong> <span id="user1-role"></span></p>
+        </div>
+        <div class="user-info-box">
+            <h3>Зміна паролю:</h3>
+            <div id="user1-change-password"></div>
+        </div>
+        <div class="user-info-box">
+            <h3>Перевірка паролю:</h3>
+            <div id="user1-check-password"></div>
+        </div>
     </div>
 
-    <div class="user-container" id="user2-container">
-        <p>Editor User:</p>
-        <p>Username: editorUser</p>
-        <p>Password: <span id="user2-password"></span></p>
-        <p>Role: editor</p>
-        <p>Password Validation: <span id="user2-validation"></span></p>
-        <button onclick="changePassword('user2')">Change Password</button>
-        <button onclick="checkPassword('user2')">Check Password</button>
+    <div class="user-info" id="user13">
+        <h2>User 2</h2>
+        <div class="user-info-box">
+            <p><strong>Ім'я користувача:</strong> <span id="user2-username"></span></p>
+            <p><strong>Роль:</strong> <span id="user2-role"></span></p>
+        </div>
+        <div class="user-info-box">
+            <h3>Зміна паролю:</h3>
+            <div id="user2-change-password"></div>
+        </div>
+        <div class="user-info-box">
+            <h3>Перевірка паролю:</h3>
+            <div id="user2-check-password"></div>
+        </div>
     </div>
 
     <script src="class.js"></script>
