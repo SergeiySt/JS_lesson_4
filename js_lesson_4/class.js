@@ -43,7 +43,7 @@ class UserManager {
 
     removeUser(username) {
         const i = this.users.findIndex(user => user.username === username);
-        if (index !== -1) {
+        if (i !== -1) {
             this.users.splice(i, 1);
             return true;
         }
@@ -88,7 +88,76 @@ user2_change_password.innerHTML = `<p>Пароль не змінений.</p>`;
 const paswdCorrect2 = user2.checkingPaswd('sova2340');
 user2_check_password.innerHTML = `<p>Пароль вірний: ${paswdCorrect2 ? 'Так' : 'Ні'}</p>`;
 
-
 const userManager = new UserManager();
 
-//const user1 = userManager.addUser
+const user5 = userManager.addUser("Viktor", "123456789", "editor");
+const user6 = userManager.addUser("Igor", "qwert12345", "admin");
+const user7 = userManager.addUser("Vasya", "colorado", "admin");
+const user8 = userManager.addUser("Svitlana", "sova2340", "editor");
+
+const userList = document.getElementById('user_list');
+userManager.users.forEach((user, index) => {
+    const a = document.createElement('li');
+    a.textContent = `Користувачі ${index + 1}: ${user.username}, Роль: ${user.role}`;
+    userList.appendChild(a);
+});
+
+const foundUser = userManager.findUser("Svitlana");
+
+const a = document.getElementById('find_user');
+const d = document.createElement('p');
+
+if (foundUser) {
+    d.textContent = `Користувача ${foundUser.username} знайдено`;
+} else {
+    d.textContent = `Користувача ${foundUser.username} не знайдено`;
+}
+
+a.appendChild(d);
+
+const username4 = "Inna"
+const foundUser2 = userManager.findUser(username4);
+const a1 = document.getElementById('find_user2');
+const d1 = document.createElement('p');
+
+if (foundUser2) {
+    d1.textContent = `Користувача ${username4} знайдено`;
+} else {
+    d1.textContent = `Користувача ${username4} не знайдено`;
+}
+
+a1.appendChild(d1);
+
+
+const userNameDelete = "Igor"
+const deleteUser = userManager.removeUser(userNameDelete);
+const c = document.getElementById('delete_user');
+const p = document.createElement('p');
+if (deleteUser) {
+    p.textContent = `Користувача ${userNameDelete} видалено`;
+} else {
+    p.textContent = `Користувача ${userNameDelete} не знайдено`;
+}
+
+delete_user.appendChild(p);
+
+
+const userNameDelete2 = "Inna"
+const deleteUser2 = userManager.removeUser(userNameDelete);
+const c1 = document.getElementById('delete_user2');
+const p1 = document.createElement('p');
+if (deleteUser2) {
+    p1.textContent = `Користувача ${userNameDelete2} видалено`;
+} else {
+    p1.textContent = `Користувача ${userNameDelete2} не знайдено`;
+}
+
+delete_user2.appendChild(p1);
+
+
+const userList2 = document.getElementById('user_list2');
+userManager.users.forEach((user, index) => {
+    const a = document.createElement('li');
+    a.textContent = `Користувачі ${index + 1}: ${user.username}, Роль: ${user.role}`;
+    userList2.appendChild(a);
+});
